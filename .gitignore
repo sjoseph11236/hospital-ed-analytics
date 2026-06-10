@@ -1,0 +1,18 @@
+*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+ 
+# GCP credentials — NEVER commit these
+*.json
+credentials/
+ 
+# macOS
+.DS_Store
+ 
+# VS Code
+.vscode/
+ 

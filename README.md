@@ -11,7 +11,7 @@ Built as the final project for ELVTR's Advanced Healthcare Analytics course (ins
 
 ## Status
 
-🔄 Week 1 — BigQuery connection established, setting up own dataset
+✅ Week 1 — BigQuery connection established, own dataset created and queried
 
 ---
 
@@ -27,7 +27,7 @@ cd hospital-ed-analytics
 ### 2. Create and activate a virtual environment
 
 ```bash
-python3 -m venv venv
+python3.11 -m venv venv
 source venv/bin/activate
 ```
 
@@ -37,7 +37,11 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
-### 4. Install and configure Google Cloud CLI
+### 4. Configure environment variables
+
+Create a `.env` file in the project root:
+
+### 5. Install and configure Google Cloud CLI
 
 This project uses Google Application Default Credentials (ADC) — no credentials JSON file needed locally.
 
@@ -58,18 +62,10 @@ gcloud auth application-default login
 
 > **Why two commands?** `gcloud init` connects the CLI to your Google account and project. `gcloud auth application-default login` is what actually lets your Python code authenticate with Google APIs — they serve different purposes.
 
-### 5. Run
+### 6. Run
 
 ```bash
 python3 app.py
-```
-
-Expected output:
-
-```
-✅ Connected to BigQuery
-   Project: your-project-id
-   Dataset: your-dataset-id
 ```
 
 ---
@@ -99,12 +95,12 @@ hospital-ed-analytics/
 
 ## Roadmap
 
-| Week | Goal                                    | Status         |
-| ---- | --------------------------------------- | -------------- |
-| 1    | BigQuery connection + own dataset setup | 🔄 In Progress |
-| 2    | First SQL queries on ED data            | ⏳ Upcoming    |
-| 3    | Pandas analysis + data cleaning         | ⏳ Upcoming    |
-| 4    | Visualizations + trend analysis         | ⏳ Upcoming    |
-| 5    | Streamlit dashboard v1                  | ⏳ Upcoming    |
-| 6    | Deeper insights + predictive analytics  | ⏳ Upcoming    |
-| 7    | Final polish + deployment               | ⏳ Upcoming    |
+| Week | Goal                                    | Status      |
+| ---- | --------------------------------------- | ----------- |
+| 1    | BigQuery connection + own dataset setup | ✅ Complete |
+| 2    | First SQL queries on ED data            | ⏳ Upcoming |
+| 3    | Pandas analysis + data cleaning         | ⏳ Upcoming |
+| 4    | Visualizations + trend analysis         | ⏳ Upcoming |
+| 5    | Streamlit dashboard v1                  | ⏳ Upcoming |
+| 6    | Deeper insights + predictive analytics  | ⏳ Upcoming |
+| 7    | Final polish + deployment               | ⏳ Upcoming |
