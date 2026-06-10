@@ -13,7 +13,7 @@ def run():
     query = """
     SELECT 
         *
-    FROM `elvtr-advanced-analytics.ed_analytics.ed_visits` ed;
+    FROM `elvtr-advanced-analytics.ed_analytics.ed_encounter` ed LIMIT 5;
     """
 
     results = client.query(query).to_dataframe()
