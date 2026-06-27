@@ -12,7 +12,8 @@ Built as the final project for ELVTR's Advanced Healthcare Analytics course (ins
 ## Status
 
 ✅ Week 1 — BigQuery connection established, own dataset created and queried
-🔄 Week 2 — Writing analytical SQL queries (door-to-room time, visit volume, admission rates)
+✅ Week 2 — Writing analytical SQL queries (door-to-room time, visit volume, admission rates)
+✅ Week 3 — Pandas exploration, null validation, SQL/Pandas cross-check complete
 
 ---
 
@@ -84,9 +85,10 @@ make dev
 
 ## Current Analysis
 
-This project currently answers three operational questions using BigQuery — door-to-room time, visit volume by chief complaint, and admission rate by chief complaint.
+This project currently answers three operational questions using BigQuery — door-to-room time, visit volume by chief complaint, and admission rate by chief complaint. Week 3 added Pandas-based exploration and validated the SQL results independently.
 
-📄 Full write-up: [docs/week2-analysis.md](docs/week2-analysis.md)
+📄 Week 2 write-up: [docs/week2-analysis.md](docs/week2-analysis.md)
+📄 Week 3 write-up: [docs/week3-analysis.md](docs/week3-analysis.md)
 
 > **Note:** Data is synthetic, generated to mirror the schema of a real Emergency Department encounter table (`ed_encounter`). No real patient data is used.
 
@@ -109,7 +111,7 @@ This project currently answers three operational questions using BigQuery — do
 | ---- | --------------------------------------- | ----------- |
 | 1    | BigQuery connection + own dataset setup | ✅ Complete |
 | 2    | First SQL queries on ED data            | ✅ Complete |
-| 3    | Pandas analysis + data cleaning         | ⏳ Upcoming |
+| 3    | Pandas analysis + data cleaning         | ✅ Complete |
 | 4    | Visualizations + trend analysis         | ⏳ Upcoming |
 | 5    | Streamlit dashboard v1                  | ⏳ Upcoming |
 | 6    | Deeper insights + predictive analytics  | ⏳ Upcoming |
