@@ -12,6 +12,7 @@ Built as the final project for ELVTR's Advanced Healthcare Analytics course (ins
 ## Status
 
 ✅ Week 1 — BigQuery connection established, own dataset created and queried
+🔄 Week 2 — Writing analytical SQL queries (door-to-room time, visit volume, admission rates)
 
 ---
 
@@ -31,15 +32,26 @@ python3.11 -m venv venv
 source venv/bin/activate
 ```
 
-### 3. Install dependencies
-
-```bash
-pip3 install -r requirements.txt
-```
-
-### 4. Configure environment variables
+### 3. Configure environment variables
 
 Create a `.env` file in the project root:
+
+**Setup:**
+
+### 4. Install dependencies
+
+```bash
+git clone https://github.com/yourusername/lhs-gmail-poller.git
+cd lhs-gmail-poller
+
+python3 -m venv venv
+source venv/bin/activate
+
+cp .env.example .env
+# Fill in your values in .env
+
+make install
+```
 
 ### 5. Install and configure Google Cloud CLI
 
@@ -65,20 +77,18 @@ gcloud auth application-default login
 ### 6. Run
 
 ```bash
-python3 app.py
+make dev
 ```
 
 ---
 
-## Project Structure
+## Current Analysis
 
-```
-hospital-ed-analytics/
-├── app.py            # BigQuery connection and queries
-├── requirements.txt  # Python dependencies
-├── .gitignore        # Excludes credentials, venv, data files
-└── README.md
-```
+This project currently answers three operational questions using BigQuery — door-to-room time, visit volume by chief complaint, and admission rate by chief complaint.
+
+📄 Full write-up: [docs/week2-analysis.md](docs/week2-analysis.md)
+
+> **Note:** Data is synthetic, generated to mirror the schema of a real Emergency Department encounter table (`ed_encounter`). No real patient data is used.
 
 ---
 
@@ -87,7 +97,7 @@ hospital-ed-analytics/
 - Python 3
 - Google BigQuery
 - Google Cloud CLI (gcloud)
-- Pandas _(coming soon)_
+- Pandas
 - Matplotlib _(coming soon)_
 - Streamlit _(coming Week 5)_
 
@@ -98,7 +108,7 @@ hospital-ed-analytics/
 | Week | Goal                                    | Status      |
 | ---- | --------------------------------------- | ----------- |
 | 1    | BigQuery connection + own dataset setup | ✅ Complete |
-| 2    | First SQL queries on ED data            | ⏳ Upcoming |
+| 2    | First SQL queries on ED data            | ✅ Complete |
 | 3    | Pandas analysis + data cleaning         | ⏳ Upcoming |
 | 4    | Visualizations + trend analysis         | ⏳ Upcoming |
 | 5    | Streamlit dashboard v1                  | ⏳ Upcoming |
